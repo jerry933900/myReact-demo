@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+
+        }    
+
+        // console.log(typeof Animal)
+        const a1 = new Animal()
+        a1.name = '旺财'
+        a1.age = 10
+        a1.eat = function () {
+            console.log(`...狗吃骨头...`)
+        }
+
+        // console.log(a1)
+        a1.eat()
+        // console.log(typeof a1)
+
+        Animal.address = '地球'
+        console.log(Animal.address)
+    </script>
+</body>
+</html>

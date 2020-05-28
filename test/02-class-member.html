@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            // 声明实例属性及给出默认值
+            color = ''
+
+            // 声明一个静态属性
+            static address = '地球'
+
+            /** 如果你实现了构造器，创建对象的时候调用构造器 */
+            constructor(name,age){
+                console.log("--------------------",name,age)
+
+                this.name = name
+                this.age = age
+            }
+
+            eat(food){
+                console.log(`${this.name} ${this.age}岁 ${this.color} 吃 ${food}`)
+            }
+
+            static sleep(){
+                console.log(`...所有动物睡觉都是闭着眼睛的...${Animal.address}`)
+            }
+        }    
+
+        const a1 = new Animal('Tom',3)
+        // a1.name = 'Tom'
+        // a1.age = 3
+        a1.eat('鱼')
+
+        console.log("xxxxxxxxxxxxxxxxxxxx")
+
+        const a2 = new Animal()
+        a2.name = '旺财'
+        a2.age = 5
+        a2.color = '棕色'
+        a2.eat('骨头')
+        // a2.name = 'Jerry'
+        // a2.age = 5
+
+        console.log(a1,a2)
+
+        console.log(`所有的动物都生活在 ${Animal.address}`)
+
+        Animal.sleep()        
+    </script>
+</body>
+</html>

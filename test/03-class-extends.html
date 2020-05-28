@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name,age){
+                this.name = name
+                this.age = age
+            }
+
+            eat(){
+                console.log('动物吃东西')
+            }
+        }
+
+        class Dog extends Animal{
+            constructor(name,age,color){
+                super(name,age)
+                
+                this.color = color
+            }
+
+            eat(food){
+                console.log(`${this.name} 吃 ${food}`)
+            }
+        }
+
+        const d1 = new Dog('冈瑟四世',5,'富贵色')
+        console.log(d1)
+        d1.eat('骨头')
+    </script>
+</body>
+</html>
